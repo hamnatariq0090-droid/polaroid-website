@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Quicksand', 'Plus Jakarta Sans', sans-serif;
+    --font-hand: 'Caveat', cursive;
+    --font-note: 'Patrick Hand', cursive;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-hand {
+  font-family: var(--font-hand);
+}
+
+.font-note {
+  font-family: var(--font-note);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Subtle organic paper grain overlay */
+.paper-texture {
+  background-image: radial-gradient(rgba(180, 110, 135, 0.06) 1px, transparent 0),
+    radial-gradient(rgba(210, 145, 168, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+/* Scrapbook deckled paper surface */
+.scrapbook-paper {
+  background: linear-gradient(180deg, #FCF7F5 0%, #F9F1EE 50%, #FCF6F4 100%);
+  box-shadow:
+    0 14px 36px -10px rgba(145, 85, 108, 0.14),
+    0 2px 6px -1px rgba(145, 85, 108, 0.08),
+    inset 0 0 40px rgba(244, 214, 224, 0.25);
+}
+
+/* Torn sticky note shadow */
+.sticky-note-pink {
+  background: linear-gradient(145deg, #FBD9E5 0%, #F7C8D8 100%);
+  box-shadow:
+    0 12px 24px -6px rgba(156, 82, 109, 0.18),
+    0 3px 8px -2px rgba(156, 82, 109, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+/* Realistic Polaroid card shadow */
+.polaroid-shadow {
+  box-shadow:
+    0 14px 28px -6px rgba(110, 62, 80, 0.16),
+    0 4px 10px -2px rgba(110, 62, 80, 0.09),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.7);
+}
+
+.polaroid-shadow-hover {
+  box-shadow:
+    0 24px 44px -8px rgba(110, 62, 80, 0.24),
+    0 8px 18px -4px rgba(110, 62, 80, 0.12),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.9);
+}
+
+/* Soft floating animation */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(1.5deg);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(5px) rotate(-1.5deg);
+  }
+}
+
+@keyframes sparkleTwinkle {
+  0%, 100% {
+    opacity: 0.55;
+    transform: scale(0.92);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 5.5s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: floatReverse 6.2s ease-in-out infinite;
+}
+
+.animate-twinkle {
+  animation: sparkleTwinkle 3.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-slow,
+  .animate-float-reverse,
+  .animate-twinkle {
+    animation: none !important;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Polaroid ♡ — Capture Little Moments",
+  "description": "A dreamy pastel digital Polaroid photo booth and interactive scrapbook to turn your favorite memories into keepsake Polaroids forever.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
